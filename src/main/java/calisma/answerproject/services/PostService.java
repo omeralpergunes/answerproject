@@ -34,7 +34,7 @@ public class PostService {
     }
 
     public Post createPostUser(PostCreateRequest newPostRequest) {
-        User user = userService.findById(newPostRequest.getUserId());
+        User user = userService.getUserById(newPostRequest.getUserId());
         if(user == null)
             return null;
         Post toSave = new Post();
